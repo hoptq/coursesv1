@@ -1,5 +1,5 @@
 // Color
-$red: #DA4949
+$red: #012e65
 $deep-blue: #19233c
 $light-green: #00ffe4
 $grey: #b7b7b7
@@ -13,15 +13,79 @@ $text-black: #464646
 	-ms-transition: $property, $duration, $function
 	-o-transition: $property, $duration, $function
 	transition: $property, $duration, $function
-// CSS 
+@mixin aspect-ratio($width, $height)
+	position: relative
+	&:before
+		display: block
+		content: " "
+		width: 100%
+		padding-top: ($height / $width) * 100%
+	> .content_thumbnail
+		position: absolute
+		top: 0
+		left: 0
+		right: 0
+		bottom: 0
+// CSS
+.bg_red
+	background: red
+.bg_blue
+	background: blue
+.green
+	color: $light-green
 .col-nav
 	width: 294px
 	overflow: hidden
 	float: left
+	margin: 0 !important
+	button
+		margin-right: 0
 a
 	text-decoration: none !important
 .part
 	padding-top: 20px
+.l
+	display: inline-block
+	background-image: url(../images/list-min.png)
+	&.facebook
+		width: 8px
+		height: 14px
+		background-position: 0 0
+	&.tweeter
+		width: 12px
+		height: 11px
+		background-position: -8px 0
+	&.googleplus
+		width: 13px
+		height: 14px
+		background-position: -20px 0
+	&.youtube
+		width: 13px
+		height: 15px
+		background-position: -33px 0
+	&.skype
+		width: 12px
+		height: 13px
+		background-position: -46px 0
+	&.t
+		width: 8px
+		height: 14px
+		background-position: -58px 0
+.i
+	display: inline-block
+	background-image: url(../images/icons.png)
+	&.logo
+		background-position: 0px 0px
+		width: 101px
+		height: 27px
+	&.search
+		background-position: -40px -27px
+		width: 19px
+		height: 19px
+	&.ava
+		background-position: 0px -27px
+		width: 40px
+		height: 40px
 .owl-wrapper
 	position: relative
 	.customNavigation
@@ -111,8 +175,15 @@ a
 		padding: 0
 		border-radius: 0
 		box-shadow: 2px 2px 8px rgba(0,0,0,0.1)
+		line-height: 1
 		@include transition(all, .3s, linear)
 		cursor: pointer
+		overflow: hidden
+		.img_thumbnail
+			@include aspect-ratio(16,9)
+			overflow: hidden
+			img
+				object-fit: cover
 		.caption
 			padding: 10px
 			overflow: hidden
@@ -133,7 +204,7 @@ a
 					display: inline-block
 					.rate
 						color: #ffda44
-						font-size: 20px !important
+						font-size: 20px
 						@include transition(all, .5s, linear)
 				.buy
 					position: absolute
@@ -150,9 +221,9 @@ a
 					.shopping
 						.material-icons
 							color: #66c366
-						.like
-							.material-icons
-								color: #d75a4a
+					.like
+						.material-icons
+							color: #d75a4a
 	&:hover
 		.thumbnail
 			box-shadow: 2px 2px 8px rgba(0,0,0,0.3)
@@ -161,6 +232,54 @@ a
 					.rate-price
 						.rate			
 					.buy
+@media screen and (max-width: 768px)
+	.courses
+		.owl-wrapper
+			padding: 0
+		.navbar-header
+			.navbar-brand
+				font-size: 12px
+				padding-top: 10px
+				padding-bottom: 10px
+				.material-icons
+					font-size: 24px
+	.course
+		.thumbnail
+			overflow: hidden
+			.img_thumbnail
+				display: inline-block
+				width: 90px
+				height: 90px
+				float: left
+				img
+					width: 90px
+					height: 90px
+					object-fit: cover
+			.content_thumbnail
+				display: inline-block
+				width: 90px
+				height: 90px
+				overflow: hidden
+			.caption
+				display: inline-block
+				width: calc(100% - 90px)
+				width: -moz-calc(100% - 90px)
+				width: -webkit-calc(100% - 90px)
+				max-height: 90px
+				padding: 5px
+				h3
+					font-size: 12px
+					line-height: 1.3
+				.author
+					margin: 0
+					font-size: 10px
+					line-height: 1.3
+				.price
+				font-size: 12px
+				.rate
+					line-height: 1
+					.material-icons
+						font-size: 14px
 /* body */
 body
 	font-size: 14px
@@ -168,21 +287,7 @@ body
 	font-family: Roboto, sans-serif
 	font-weight: 400
 	line-height: 1.3
-.i
-	display: inline-block
-	background-image: url(../images/icons.png)
-	&.logo
-		background-position: 0px 0px
-		width: 101px
-		height: 27px
-	&.search
-		background-position: -40px -27px
-		width: 19px
-		height: 19px
-	&.ava
-		background-position: 0px -27px
-		width: 40px
-		height: 40px
+
 /* header */
 #navigation
 	nav
@@ -244,6 +349,8 @@ body
 	height: calc(100vh - 58px)
 	border-right: solid 1px $grey
 	// overflow-y: scroll
+	z-index: 100
+	background: white
 	padding: 22px 30px
 	.panel-heading
 		background: $red
@@ -366,32 +473,109 @@ body
 #footer
 	padding-left: 294px
 	overflow: hidden
+	background: #2b2b2b
+	color: white
+	ul
+		list-style: none
+		padding: 0
 	#email_row
-		background: #a0151a
+		background: $red
 		color: white
 		overflow: hidden
 		padding-top: 10px
 		padding-bottom: 10px
 		form
 			margin: 0
+			.form-group
+				width: 50%
+				vertical-align: middle
+				margin-bottom: 0
+				display: inline-block
 			.form-control
 				border-top-left-radius: 10px
 				border-bottom-left-radius: 10px
 				border-top-right-radius: 0px
 				border-bottom-right-radius: 0px
-				width: 300px
+				width: 100%
 			button
 				border-top-left-radius: 0
 				border-bottom-left-radius: 0
 				border-top-right-radius: 10px
 				border-bottom-right-radius: 10px
-				background: $red
+				background: #f7941d
 				color: white !important
 				padding-left: 20px
 				padding-right: 20px
 				margin-left: -5px
 		span
 			line-height: 34px
+	.col-left
+		> ul
+			margin-top: 35px
+			text-align: center
+			> li
+				display: inline-block
+				vertical-align: top
+				margin: 0 15px 15px 15px
+				.list
+					li
+						line-height: 24px
+						text-align: left
+						a
+							color: #999999
+							font-size: 12px
+							.material-icons
+								font-size: 14px
+								vertical-align: sub
+								margin-right: 8px
+	#about_us
+		.heading
+			padding: 35px 0 15px 0
+			border-bottom: solid 4px rgba(255,255,255,0.4)
+			h4
+				display: inline-block
+				margin: 0
+				font-size: 24px
+				text-transform: uppercase
+				font-weight: 400
+			.social
+				float: right
+				> li
+					display: inline-block
+					a
+						display: block
+						width: 27px
+						height: 27px
+						padding: 0
+						text-align: center
+						line-height: 27px
+						background: rgba(255,255,255,0.2)
+						@include transition(all, 1s, linear)
+					&:hover
+						background: #e02a20
+		.contact
+			.list-contact
+				overflow: hidden
+				margin: 15px 0 30px 0
+				display: inline-block
+				> div
+					display: inline-block
+					float: left
+					margin-right: 30px
+					li
+						font-size: 14px
+						line-height: 24px
+						.material-icons
+							vertical-align: sub
+							font-size: 15px
+							margin-right: 3px
+			.logo_bot
+				display: inline-block
+				vertical-align: top
+				margin-top: 15px
+				float: right
+				img
+					max-height: 70px
 /* media */
 @media screen and (max-width: 992px)
 	.col-nav
@@ -419,6 +603,15 @@ body
 	#slide
 		.carousel-control, .carousel-indicators
 			display: none
+	.customNavigation
+		.btn
+			.material-icons
+				font-size: 24px !important
+	#about_us
+		.heading
+			h4
+				font-size: 14px !important
+				line-height: 24px
 @media screen and (max-height: 600px)
 	#nav_aside
 		// display: scroll

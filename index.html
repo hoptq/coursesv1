@@ -90,12 +90,13 @@
               <div id="topic" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
                 <div class="panel-body">
                   <ul class="list-group">
-                    <li class="list-group-item"><a href="#"><i class="material-icons">account_circle</i>Khoá học của tôi</a></li>
-                    <li class="list-group-item"><a href="#"><i class="material-icons">history</i>Lịch sửa học của bạn<</a></li>
-                    <li class="list-group-item"><a href="#"><i class="material-icons">star_border</i>Có thể bạn quan tâm</a></li>
-                    <li class="list-group-item"><a href="#"><i class="material-icons">thumb_up</i>Các khoá học hay nhất</a></li>
-                    <li class="list-group-item"><a href="#"><i class="material-icons">fiber_new</i>Các khoá học mới ra</a></li>
-                    <li class="list-group-item"><a href="#"><i class="material-icons">local_grocery_store</i>Giảm giá - Ưu đãi</a></li>
+                    <li class="list-group-item"><a href="#"><i class="material-icons">phonelink</i>Công nghệ thông tin</a></li>
+                    <li class="list-group-item"><a href="#"><i class="material-icons">business_center</i>Kinh doanh và khởi nghiệp</a></li>
+                    <li class="list-group-item"><a href="#"><i class="material-icons">folder_open</i>Ứng dụng văn phòng</a></li>
+                    <li class="list-group-item"><a href="#"><i class="material-icons">person</i>Phát triển cá nhân</a></li>
+                    <li class="list-group-item"><a href="#"><i class="material-icons">child_friendly</i>Nuôi dạy con</a></li>
+                    <li class="list-group-item"><a href="#"><i class="material-icons">palette</i>Nghệ thuật</a></li>
+                    <li class="list-group-item"><a href="#"><i class="material-icons">language</i>Tiếng Anh</a></li>
                   </ul>
                 </div>
               </div>
@@ -131,15 +132,12 @@
               <ul class="nav navbar-nav">
                 <li class="active"><a href="#">Trang chủ</a></li>
                 <li><a href="#">Giảng viên</a></li>
-                <li><a href="#">Thư viện</a></li>
-                <li><a href="#">Hướng dẫn</a></li>
-                <li><a href="#">Đăng ký</a></li>
               </ul>
             </div><!-- /.container-fluid -->
           </nav>
           <!-- End nav -->
           <div class="content">
-            <article id="slide">
+            <article id="slide" class="hidden-sm hidden-xs">
               <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
                 <!-- Indicators -->
                 <ol class="carousel-indicators">
@@ -169,11 +167,11 @@
               </div>
             </article>
             <!-- End slide -->
-            <article id="banner_slide">
+            <article id="banner_slide" class="hidden-sm hidden-xs">
               <div class="owl-wrapper">
-                <div class="owl-carousel banner_list">
+                <div class="banner_list owl-carousel">
                   <div class="item">
-                    <img class="owl-lazy" data-src="assets/images/course_1-min.jpg" alt="course1">
+                    <img src="assets/images/course_1-min.jpg" alt="course1">
                     <a href="#"><span class="title">Phát triển cá nhân</span></a>
                   </div>
                 </div>
@@ -184,7 +182,7 @@
               </div>
             </article>
             <!-- End banner_slide -->
-            <article class="courses part" id="technology">
+            <article class="courses part" id="business">
               <nav class="navbar">
                 <div class="navbar-header">
                   <a class="navbar-brand" href="#"><i class="material-icons">phonelink</i>Công nghệ thông tin</a>
@@ -197,10 +195,14 @@
                 </ul>
               </nav>
               <div class="owl-wrapper">
-                <div class="owl-carousel course_list">
+                <div class="course_list owl-carousel">
                   <div class="course">
                     <div class="thumbnail">
-                      <img src="assets/images/course1-min.jpg" alt="course1">
+                      <div class="img_thumbnail">
+                        <div class="content_thumbnail">
+                          <img src="assets/images/course1-min.jpg" alt="course1" class="post__featured-image">
+                        </div>
+                      </div>
                       <div class="caption">
                         <h3>Nói thoả thích 8 tiếng mỗi ngày mà không lo mất giọng
                         </h3>
@@ -217,7 +219,31 @@
                         </div>
                       </div>
                     </div>
-                  </div>
+                  </div><!-- end course -->
+                  <div class="course">
+                    <div class="thumbnail">
+                      <div class="img_thumbnail">
+                        <div class="content_thumbnail">
+                          <img src="https://staticedm.r.worldssl.net/uploads/images/courses/thietkewebvoiphotoshopvacachkiem-tien-tu-cong-viec-freelance.png" alt="course1">
+                        </div>
+                      </div>
+                      <div class="caption">
+                        <h3>Nói thoả thích 8 tiếng mỗi ngày mà không lo mất giọng
+                        </h3>
+                        <h4 class="author">Trần Nam Anh</h4>
+                        <div class="info">
+                          <div class="rate-price">
+                            <div class="rate"><i class="material-icons">star</i><i class="material-icons">star</i><i class="material-icons">star</i></div>
+                            <div class="price">599,000 đ</div>
+                          </div>
+                          <div class="buy">
+                            <a href="#" class="shopping"><i class="material-icons">shopping_cart</i></a>
+                            <a href="#" class="like"><i class="material-icons">favorite</i></a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div><!-- end course -->
                 </div>
                 <div class="customNavigation style2">
                   <span class="btn prev"><i class="material-icons">chevron_left</i></span>
@@ -242,7 +268,11 @@
                 <div class="owl-carousel course_list">
                   <div class="course">
                     <div class="thumbnail">
-                      <img src="assets/images/course1-min.jpg" alt="course1">
+                      <div class="img_thumbnail">
+                        <div class="content_thumbnail">
+                          <img src="assets/images/course1-min.jpg" alt="course1">
+                        </div>
+                      </div>
                       <div class="caption">
                         <h3>Nói thoả thích 8 tiếng mỗi ngày mà không lo mất giọng
                         </h3>
@@ -259,7 +289,31 @@
                         </div>
                       </div>
                     </div>
-                  </div>
+                  </div><!-- end course -->
+                  <div class="course">
+                    <div class="thumbnail">
+                      <div class="img_thumbnail">
+                        <div class="content_thumbnail">
+                          <img src="https://staticedm.r.worldssl.net/uploads/images/courses/thietkewebvoiphotoshopvacachkiem-tien-tu-cong-viec-freelance.png" alt="course1">
+                        </div>
+                      </div>
+                      <div class="caption">
+                        <h3>Nói thoả thích 8 tiếng mỗi ngày mà không lo mất giọng
+                        </h3>
+                        <h4 class="author">Trần Nam Anh</h4>
+                        <div class="info">
+                          <div class="rate-price">
+                            <div class="rate"><i class="material-icons">star</i><i class="material-icons">star</i><i class="material-icons">star</i></div>
+                            <div class="price">599,000 đ</div>
+                          </div>
+                          <div class="buy">
+                            <a href="#" class="shopping"><i class="material-icons">shopping_cart</i></a>
+                            <a href="#" class="like"><i class="material-icons">favorite</i></a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div><!-- end course -->
                 </div>
                 <div class="customNavigation style2">
                   <span class="btn prev"><i class="material-icons">chevron_left</i></span>
@@ -284,7 +338,11 @@
                 <div class="owl-carousel course_list">
                   <div class="course">
                     <div class="thumbnail">
-                      <img src="assets/images/course1-min.jpg" alt="course1">
+                      <div class="img_thumbnail">
+                        <div class="content_thumbnail">
+                          <img src="assets/images/course1-min.jpg" alt="course1">
+                        </div>
+                      </div>
                       <div class="caption">
                         <h3>Nói thoả thích 8 tiếng mỗi ngày mà không lo mất giọng
                         </h3>
@@ -301,7 +359,31 @@
                         </div>
                       </div>
                     </div>
-                  </div>
+                  </div><!-- end course -->
+                  <div class="course">
+                    <div class="thumbnail">
+                      <div class="img_thumbnail">
+                        <div class="content_thumbnail">
+                          <img src="https://staticedm.r.worldssl.net/uploads/images/courses/thietkewebvoiphotoshopvacachkiem-tien-tu-cong-viec-freelance.png" alt="course1">
+                        </div>
+                      </div>
+                      <div class="caption">
+                        <h3>Nói thoả thích 8 tiếng mỗi ngày mà không lo mất giọng
+                        </h3>
+                        <h4 class="author">Trần Nam Anh</h4>
+                        <div class="info">
+                          <div class="rate-price">
+                            <div class="rate"><i class="material-icons">star</i><i class="material-icons">star</i><i class="material-icons">star</i></div>
+                            <div class="price">599,000 đ</div>
+                          </div>
+                          <div class="buy">
+                            <a href="#" class="shopping"><i class="material-icons">shopping_cart</i></a>
+                            <a href="#" class="like"><i class="material-icons">favorite</i></a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div><!-- end course -->
                 </div>
                 <div class="customNavigation style2">
                   <span class="btn prev"><i class="material-icons">chevron_left</i></span>
@@ -326,7 +408,11 @@
                 <div class="owl-carousel course_list">
                   <div class="course">
                     <div class="thumbnail">
-                      <img src="assets/images/course1-min.jpg" alt="course1">
+                      <div class="img_thumbnail">
+                        <div class="content_thumbnail">
+                          <img src="assets/images/course1-min.jpg" alt="course1">
+                        </div>
+                      </div>
                       <div class="caption">
                         <h3>Nói thoả thích 8 tiếng mỗi ngày mà không lo mất giọng
                         </h3>
@@ -343,7 +429,31 @@
                         </div>
                       </div>
                     </div>
-                  </div>
+                  </div><!-- end course -->
+                  <div class="course">
+                    <div class="thumbnail">
+                      <div class="img_thumbnail">
+                        <div class="content_thumbnail">
+                          <img src="https://staticedm.r.worldssl.net/uploads/images/courses/thietkewebvoiphotoshopvacachkiem-tien-tu-cong-viec-freelance.png" alt="course1">
+                        </div>
+                      </div>
+                      <div class="caption">
+                        <h3>Nói thoả thích 8 tiếng mỗi ngày mà không lo mất giọng
+                        </h3>
+                        <h4 class="author">Trần Nam Anh</h4>
+                        <div class="info">
+                          <div class="rate-price">
+                            <div class="rate"><i class="material-icons">star</i><i class="material-icons">star</i><i class="material-icons">star</i></div>
+                            <div class="price">599,000 đ</div>
+                          </div>
+                          <div class="buy">
+                            <a href="#" class="shopping"><i class="material-icons">shopping_cart</i></a>
+                            <a href="#" class="like"><i class="material-icons">favorite</i></a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div><!-- end course -->
                 </div>
                 <div class="customNavigation style2">
                   <span class="btn prev"><i class="material-icons">chevron_left</i></span>
@@ -368,7 +478,11 @@
                 <div class="owl-carousel course_list">
                   <div class="course">
                     <div class="thumbnail">
-                      <img src="assets/images/course1-min.jpg" alt="course1">
+                      <div class="img_thumbnail">
+                        <div class="content_thumbnail">
+                          <img src="assets/images/course1-min.jpg" alt="course1">
+                        </div>
+                      </div>
                       <div class="caption">
                         <h3>Nói thoả thích 8 tiếng mỗi ngày mà không lo mất giọng
                         </h3>
@@ -385,7 +499,31 @@
                         </div>
                       </div>
                     </div>
-                  </div>
+                  </div><!-- end course -->
+                  <div class="course">
+                    <div class="thumbnail">
+                      <div class="img_thumbnail">
+                        <div class="content_thumbnail">
+                          <img src="https://staticedm.r.worldssl.net/uploads/images/courses/thietkewebvoiphotoshopvacachkiem-tien-tu-cong-viec-freelance.png" alt="course1">
+                        </div>
+                      </div>
+                      <div class="caption">
+                        <h3>Nói thoả thích 8 tiếng mỗi ngày mà không lo mất giọng
+                        </h3>
+                        <h4 class="author">Trần Nam Anh</h4>
+                        <div class="info">
+                          <div class="rate-price">
+                            <div class="rate"><i class="material-icons">star</i><i class="material-icons">star</i><i class="material-icons">star</i></div>
+                            <div class="price">599,000 đ</div>
+                          </div>
+                          <div class="buy">
+                            <a href="#" class="shopping"><i class="material-icons">shopping_cart</i></a>
+                            <a href="#" class="like"><i class="material-icons">favorite</i></a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div><!-- end course -->
                 </div>
                 <div class="customNavigation style2">
                   <span class="btn prev"><i class="material-icons">chevron_left</i></span>
@@ -410,7 +548,11 @@
                 <div class="owl-carousel course_list">
                   <div class="course">
                     <div class="thumbnail">
-                      <img src="assets/images/course1-min.jpg" alt="course1">
+                      <div class="img_thumbnail">
+                        <div class="content_thumbnail">
+                          <img src="assets/images/course1-min.jpg" alt="course1">
+                        </div>
+                      </div>
                       <div class="caption">
                         <h3>Nói thoả thích 8 tiếng mỗi ngày mà không lo mất giọng
                         </h3>
@@ -427,7 +569,31 @@
                         </div>
                       </div>
                     </div>
-                  </div>
+                  </div><!-- end course -->
+                  <div class="course">
+                    <div class="thumbnail">
+                      <div class="img_thumbnail">
+                        <div class="content_thumbnail">
+                          <img src="https://staticedm.r.worldssl.net/uploads/images/courses/thietkewebvoiphotoshopvacachkiem-tien-tu-cong-viec-freelance.png" alt="course1">
+                        </div>
+                      </div>
+                      <div class="caption">
+                        <h3>Nói thoả thích 8 tiếng mỗi ngày mà không lo mất giọng
+                        </h3>
+                        <h4 class="author">Trần Nam Anh</h4>
+                        <div class="info">
+                          <div class="rate-price">
+                            <div class="rate"><i class="material-icons">star</i><i class="material-icons">star</i><i class="material-icons">star</i></div>
+                            <div class="price">599,000 đ</div>
+                          </div>
+                          <div class="buy">
+                            <a href="#" class="shopping"><i class="material-icons">shopping_cart</i></a>
+                            <a href="#" class="like"><i class="material-icons">favorite</i></a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div><!-- end course -->
                 </div>
                 <div class="customNavigation style2">
                   <span class="btn prev"><i class="material-icons">chevron_left</i></span>
@@ -452,7 +618,11 @@
                 <div class="owl-carousel course_list">
                   <div class="course">
                     <div class="thumbnail">
-                      <img src="assets/images/course1-min.jpg" alt="course1">
+                      <div class="img_thumbnail">
+                        <div class="content_thumbnail">
+                          <img src="assets/images/course1-min.jpg" alt="course1">
+                        </div>
+                      </div>
                       <div class="caption">
                         <h3>Nói thoả thích 8 tiếng mỗi ngày mà không lo mất giọng
                         </h3>
@@ -469,7 +639,31 @@
                         </div>
                       </div>
                     </div>
-                  </div>
+                  </div><!-- end course -->
+                  <div class="course">
+                    <div class="thumbnail">
+                      <div class="img_thumbnail">
+                        <div class="content_thumbnail">
+                          <img src="https://staticedm.r.worldssl.net/uploads/images/courses/thietkewebvoiphotoshopvacachkiem-tien-tu-cong-viec-freelance.png" alt="course1">
+                        </div>
+                      </div>
+                      <div class="caption">
+                        <h3>Nói thoả thích 8 tiếng mỗi ngày mà không lo mất giọng
+                        </h3>
+                        <h4 class="author">Trần Nam Anh</h4>
+                        <div class="info">
+                          <div class="rate-price">
+                            <div class="rate"><i class="material-icons">star</i><i class="material-icons">star</i><i class="material-icons">star</i></div>
+                            <div class="price">599,000 đ</div>
+                          </div>
+                          <div class="buy">
+                            <a href="#" class="shopping"><i class="material-icons">shopping_cart</i></a>
+                            <a href="#" class="like"><i class="material-icons">favorite</i></a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div><!-- end course -->
                 </div>
                 <div class="customNavigation style2">
                   <span class="btn prev"><i class="material-icons">chevron_left</i></span>
@@ -478,7 +672,7 @@
               </div>
             </article>
             <!-- End english -->
-            <article id="ads" class="part">
+            <article id="ads" class="part hidden-sm hidden-xs">
               <figure>
                 <a href="#"><img src="assets/images/banner2-min.jpg" alt="banner2"></a>
               </figure>
@@ -492,10 +686,10 @@
             <div class="container-fluid">
               <div class="row">
                 <div class="col-lg-6 text-center">
-                  <span>Nhập mail để nhận các ưu đãi mới nhất từ edumall</span>
+                  <span>Nhập mail để nhận các ưu đãi mới nhất từ Edumall</span>
                 </div>
                 <div class="col-lg-6 text-center">
-                  <form class="navbar-form">
+                  <form class="form-regis">
                     <div class="form-group">
                       <input type="text" class="form-control" placeholder="Email">
                     </div>
@@ -509,10 +703,38 @@
           <article id="about_us">
             <div class="container-fluid">
               <div class="row">
-                
+                <section class="col-right col-xs-12">
+                  <article class="heading">
+                    <h4>Về Edumall</h4>
+                    <ul class="social">
+                      <li><a href="#"><span class="l facebook"></span></a></li>
+                      <li><a href="#"><span class="l tweeter"></span></a></li>
+                      <li><a href="#"><span class="l googleplus"></span></a></li>
+                      <li><a href="#"><span class="l youtube"></span></a></li>
+                      <li><a href="#"><span class="l skype"></span></a></li>
+                      <li><a href="#"><span class="l t"></span></a></li>
+                    </ul>
+                  </article>
+                  <article class="contact">
+                    <ul class="list-contact">
+                      <div class="col-left">
+                        <li><i class="material-icons">email</i> Mail: <span class="green">cskh@edumall.vn</span></li>
+                        <li><i class="material-icons">phone</i> Liên hệ <span class="green">1800.6816</span></li>
+                      </div>
+                      <div class="col-right">
+                        <li><i class="material-icons">access_alarm</i> Giờ làm việc <span class="green">7h00 - 22h00</span> <i>(các ngày trong tuần)</i></li>
+                        <li><i class="material-icons">room</i> Địa chỉ: HN - <span class="green">75</span> Phương Mai, Đống Đa, HN</li>
+                      </div>
+                    </ul>
+                    <div class="logo_bot hidden-xs">
+                      <a href="#"><img src="assets/images/logo_check-min.png" alt="Da dang ky"></a>
+                    </div>
+                  </article>
+                </section>
               </div>
             </div>
           </article>
+          <!-- End about_us -->
         </footer>
         <!-- End footer -->
       </div>
@@ -520,7 +742,7 @@
     <!-- End main -->
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
     <script src="assets/js/bootstrap.min.js"></script>
     <script src="assets/js/jquery.mousewheel.js"></script>
     <script src="assets/js/owlcarousel.min.js"></script>
