@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Homepage</title>
+    <title>Homepage_v1.2</title>
 
     <!-- Bootstrap -->
     <link href="assets/css/bootstrap.min.css" rel="stylesheet">
@@ -21,34 +21,77 @@
     <![endif]-->
   </head>
   <body>
+    <section class="tutorial">
+      <img src="assets/images/hd.gif" alt="Huong dan keo khoa hoc">
+    </section>
     <header id="header" class="container-fluid">
-      <section id="navigation">
-        <nav class="navbar navbar-fixed-top">
+      <section id="navigation" class="row">
+        <nav class="navbar navbar-static-top">
+          <div class="container-fluid hidden-sm hidden-xs">
+            <ul class="nav navbar-nav navbar-right list-menu-top">
+              <li><a href="#">VNĐ</a></li>
+              <li><a href="#">Tiếng Việt</a></li>
+              <li><a href="#">Khoá học của tôi</a></li>
+              <li><a href="#">Lịch sử học</a></li>
+              <li><a href="#">Danh sách quan tâm</a></li>
+              <li><a href="#">Login</a></li>
+            </ul>
+          </div>
           <div class="container-fluid">
-            
-              <!-- Brand and toggle get grouped for better mobile display -->
-              <div class="navbar-header col-nav">
-                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#nav_mob" aria-expanded="false">
-                  <i class="material-icons">menu</i>
-                </button>
-                <a class="navbar-brand" href="https://edumall.vn/courses" target="_blank"><span class="i logo"></span></a>
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header col-nav">
+              <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#nav_mob" aria-expanded="false">
+                <i class="material-icons">menu</i>
+              </button>
+              <a class="navbar-brand" href="https://edumall.vn/courses" target="_blank"><img src="assets/images/logo_edumall.png" alt="Edumall" height="40"></a>
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div id="nav_mob" class="collapse">
+              <div class="list-group">
+                <a href="#" class="list-group-item"><i class="material-icons">perm_identity</i>Đăng nhập / Đăng ký</a>
+                <a href="#" class="list-group-item"><i class="material-icons">account_circle</i>Khoá học của tôi</a>
+                <a href="#" class="list-group-item"><i class="material-icons">history</i>Phát triển cá nhân</a>
+                <a href="#" class="list-group-item"><i class="material-icons">child_friendly</i>Nuôi dạy con</a></a>
+                <a href="#" class="list-group-item"><i class="material-icons">phonelink</i>Công nghệ thông tin</a>
+                <a href="#" class="list-group-item"><i class="material-icons">business_center</i>Kinh doanh và khởi nghiệp</a></a>
+                <a href="#" class="list-group-item"><i class="material-icons">folder_open</i>Ứng dụng văn phòng</a>
+                <a href="#" class="list-group-item"><i class="material-icons">palette</i>Nghệ thuật</a>
+                <a href="#" class="list-group-item"><i class="material-icons">language</i>Tiếng Anh</a>
+                <a href="#" class="list-group-item"><i class="material-icons">favorite_border</i>Chủ đề khác</a>
               </div>
-              <form class="navbar-form navbar-left">
-                <div class="form-group">
-                  <input type="text" class="form-control" placeholder="Tìm kiếm">
+            </div>
+            <form class="navbar-form navbar-left form-inline">
+              <div class="form-group">
+                <div class="input-group">
+                  <div class="input-group-addon">Tìm kiếm</div>
+                  <input type="text" class="form-control" placeholder="Bạn đang tìm khoá học nào...?">
+                  <div class="input-group-addon"><button type="submit" class="btn btn-search"><span class="i search"></span></button></div>
                 </div>
-                <button type="submit" class="btn btn-search"><span class="i search"></span></button>
-              </form>
-              <ul class="nav navbar-nav navbar-right infor-user">
-                <li class="notice"><a href="#"><i class="material-icons">notifications_none</i></a></li>
-                <li class="login">
-                  <span class="name">Hi, thuytp3</span>
-                  <a href="#"><span class="i ava"></span></a>
-                </li>
-              </ul>
-            
+              </div>
+            </form>
+            <ul class="nav navbar-nav navbar-right infor-user">
+              <!-- <li class="notice"><a href="#"><i class="material-icons">notifications_none</i></a></li>
+              <li class="login">
+                <span class="name">Hi, thuytp3</span>
+                <a href="#"><span class="i ava"></span></a>
+              </li> -->
+              <li class="regis">
+                <div class="switch">
+                  <input id="cmn-toggle-1" class="cmn-toggle cmn-toggle-round" type="checkbox">
+                  <label for="cmn-toggle-1"></label>
+                </div>
+              </li>
+            </ul>
           </div><!-- /.container-fluid -->
         </nav>
+        <!-- End nav -->
+        <div class="clear-fix"></div>
+        <div class="menu hidden-sm hidden-xs">
+          <ul class="nav navbar-nav">
+            <li><a href="#">Trang chủ</a></li>
+            <li><a href="#">Giáo viên</a></li>
+          </ul>
+        </div>
       </section>
       <!-- End nav_desk -->
     </header>
@@ -56,88 +99,75 @@
     <main id="main" class="container-fluid">
       <div class="row">
         <aside class="nav_course col-nav" id="nav_aside">
-          <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
-            <div class="panel">
-              <div class="panel-heading" role="tab" id="headingOne" role="button" data-toggle="collapse" data-parent="#accordion" href="#home" aria-expanded="true" aria-controls="home">
-                <h4 class="panel-title">
-                  <i class="material-icons">home</i>
-                  <a role="button" data-toggle="collapse" data-parent="#accordion" href="#home" aria-expanded="true" aria-controls="home">
-                    Trang chủ
-                  </a>
-                </h4>
+          <div class="list-group" id="topic">
+            <a href="#" class="list-group-item active">
+              <i class="material-icons">home</i>Danh sách chủ đề
+            </a>
+            <a href="#" class="list-group-item"><i class="material-icons">account_circle</i>Khoá học của tôi</a>
+            <a href="#" class="list-group-item"><i class="material-icons">history</i>Phát triển cá nhân</a>
+            <a href="#" class="list-group-item"><i class="material-icons">child_friendly</i>Nuôi dạy con</a></a>
+            <a href="#" class="list-group-item"><i class="material-icons">phonelink</i>Công nghệ thông tin</a>
+            <a href="#" class="list-group-item"><i class="material-icons">business_center</i>Kinh doanh và khởi nghiệp</a></a>
+            <a href="#" class="list-group-item"><i class="material-icons">folder_open</i>Ứng dụng văn phòng</a>
+            <a href="#" class="list-group-item"><i class="material-icons">palette</i>Nghệ thuật</a>
+            <a href="#" class="list-group-item"><i class="material-icons">language</i>Tiếng Anh</a>
+            <a href="#" class="list-group-item"><i class="material-icons">favorite_border</i>Chủ đề khác</a>
+          </div>
+          <div class="banner_ads">
+            <figure>
+              <a href="#"><img src="assets/images/banner_aside_2.jpg" alt="banner" class="img-fluid"></a>
+            </figure>
+          </div>
+
+          <div class="banner_ads">
+            <figure>
+              <a href="#"><img src="assets/images/banner_aside_3.jpg" alt="banner" class="img-fluid"></a>
+            </figure>
+          </div>
+          
+          <article class="courses part owl-wrapper" id="author">
+            <div class="wrapper_content">
+              <div class="author_aside owl-carousel">
+                <div class="thumbanil_author">
+                  <div class="thumbnail">
+                    <img src="assets/images/gv_ppr.jpg" alt="Phan Phuc Thang">
+                    <div class="caption">
+                      <i><p>"Làm chủ giọng nói để thành công hơn trong công việc, hãy luyện tập để có giọng nói hay hơn, khỏe hơn, truyền cảm hơn, từ đó dễ dàng chiếm được cảm tình của người đối diện trong giao tiếp" </p></i>
+                      <h4 class="author">Phan Phúc Thắng</h4>
+                      <span class="author_info">Giảng viên Phan Phúc Thắng</span>              
+                    </div>
+                  </div>
+                </div><!-- end course -->
+                <div class="thumbanil_author">
+                  <div class="thumbnail">
+                    <img src="assets/images/gv_ppr.jpg" alt="Phan Phuc Thang">
+                    <div class="caption">
+                      <i><p>"Làm chủ giọng nói để thành công hơn trong công việc, hãy luyện tập để có giọng nói hay hơn, khỏe hơn, truyền cảm hơn, từ đó dễ dàng chiếm được cảm tình của người đối diện trong giao tiếp" </p></i>
+                      <h4 class="author">Phan Phúc Thắng</h4>
+                      <span class="author_info">Giảng viên Phan Phúc Thắng</span>                   
+                    </div>
+                  </div>
+                </div><!-- end course -->
               </div>
-              <div id="home" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
-                <div class="panel-body">
-                  <ul class="list-group">
-                    <li class="list-group-item"><a href="#"><i class="material-icons">account_circle</i>Khoá học của tôi</a></li>
-                    <li class="list-group-item"><a href="#"><i class="material-icons">history</i>Lịch sửa học của bạn</a></li>
-                    <li class="list-group-item"><a href="#"><i class="material-icons">star_border</i>Có thể bạn quan tâm</a></li>
-                    <li class="list-group-item"><a href="#"><i class="material-icons">thumb_up</i>Các khoá học hay nhất</a></li>
-                    <li class="list-group-item"><a href="#"><i class="material-icons">fiber_new</i>Các khoá học mới ra</a></li>
-                    <li class="list-group-item"><a href="#"><i class="material-icons">local_grocery_store</i>Giảm giá - Ưu đãi</a></li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-            <div class="panel">
-              <div class="panel-heading" role="tab" id="headingTwo"  class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#topic" aria-expanded="false" aria-controls="topic">
-                <h4 class="panel-title">
-                  <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#topic" aria-expanded="false" aria-controls="topic">
-                    Danh sách chủ đề<i class="material-icons control">chevron_right</i>
-                  </a>
-                </h4>
-              </div>
-              <div id="topic" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
-                <div class="panel-body">
-                  <ul class="list-group">
-                    <li class="list-group-item"><a href="#"><i class="material-icons">phonelink</i>Công nghệ thông tin</a></li>
-                    <li class="list-group-item"><a href="#"><i class="material-icons">business_center</i>Kinh doanh và khởi nghiệp</a></li>
-                    <li class="list-group-item"><a href="#"><i class="material-icons">folder_open</i>Ứng dụng văn phòng</a></li>
-                    <li class="list-group-item"><a href="#"><i class="material-icons">person</i>Phát triển cá nhân</a></li>
-                    <li class="list-group-item"><a href="#"><i class="material-icons">child_friendly</i>Nuôi dạy con</a></li>
-                    <li class="list-group-item"><a href="#"><i class="material-icons">palette</i>Nghệ thuật</a></li>
-                    <li class="list-group-item"><a href="#"><i class="material-icons">language</i>Tiếng Anh</a></li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-            <div class="panel">
-              <div class="panel-heading" role="tab" id="headingThree"  class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#room" aria-expanded="false" aria-controls="room">
-                <h4 class="panel-title">
-                  <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#room" aria-expanded="false" aria-controls="room">
-                    Lựa chọn lớp học<i class="material-icons control">chevron_right</i>
-                  </a>
-                </h4>
-              </div>
-              <div id="room" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
-                <div class="panel-body">
-                  <ul class="list-group">
-                    <li class="list-group-item"><a href="#"><i class="material-icons">account_circle</i>Khoá học của tôi</a></li>
-                    <li class="list-group-item"><a href="#"><i class="material-icons">history</i>Lịch sửa học của bạn<</a></li>
-                    <li class="list-group-item"><a href="#"><i class="material-icons">star_border</i>Có thể bạn quan tâm</a></li>
-                    <li class="list-group-item"><a href="#"><i class="material-icons">thumb_up</i>Các khoá học hay nhất</a></li>
-                    <li class="list-group-item"><a href="#"><i class="material-icons">fiber_new</i>Các khoá học mới ra</a></li>
-                    <li class="list-group-item"><a href="#"><i class="material-icons">local_grocery_store</i>Giảm giá - Ưu đãi</a></li>
-                  </ul>
-                </div>
+              <div class="customNavigation style3">
+                <span class="btn prev"><i class="material-icons">chevron_left</i></span>
+                <span class="btn next"><i class="material-icons">chevron_right</i></span>
               </div>
             </div>
+          </article>
+          <!-- End technology -->
+          
+
+          <div class="banner_ads">
+            <figure>
+              <a href="#"><img src="assets/images/banner_aside_4.jpg" alt="banner" class="img-fluid"></a>
+            </figure>
           </div>
         </aside>
         <!-- End aside -->
         <section id="course_table">
-          <nav class="navbar navbar-static-top text-center course_table_nav">
-            <div class="container-fluid">
-              <!-- Collect the nav links, forms, and other content for toggling -->
-              <ul class="nav navbar-nav">
-                <li class="active"><a href="#">Trang chủ</a></li>
-                <li><a href="#">Giảng viên</a></li>
-              </ul>
-            </div><!-- /.container-fluid -->
-          </nav>
-          <!-- End nav -->
           <div class="content">
-            <article id="slide" class="hidden-sm hidden-xs">
+            <article id="slide" class="hidden-sm hidden-xs slide">
               <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
                 <!-- Indicators -->
                 <ol class="carousel-indicators">
@@ -167,7 +197,7 @@
               </div>
             </article>
             <!-- End slide -->
-            <article id="banner_slide" class="hidden-sm hidden-xs">
+            <article id="banner_slide" class="hidden-sm hidden-xs banner_slide">
               <div class="owl-wrapper">
                 <div class="banner_list owl-carousel">
                   <div class="item">
@@ -175,26 +205,116 @@
                     <a href="#"><span class="title">Phát triển cá nhân</span></a>
                   </div>
                 </div>
-                <div class="customNavigation style1">
-                  <span class="btn prev"><i class="material-icons">chevron_left</i></span>
-                  <span class="btn next"><i class="material-icons">chevron_right</i></span>
+              </div>
+            </article>
+            <!-- End banner_slide -->
+            <article class="courses part owl-wrapper" id="technology">
+              <nav class="navbar">
+                <div class="navbar-header">
+                  <span class="square_box"><i class="material-icons">phonelink</i></span>
+                  <a class="navbar-brand" href="#">Các khoá bán chạy nhất</a>
+                </div>
+                <ul class="nav navbar-nav navbar-right">
+                  <li class="hidden-xs"><a href="#"><span class="badge">Xem tất cả<i class="material-icons">add_circle</i></span></a></li>
+                  <li class="hidden-xs hidden-sm hidden-md"><a href="#">Khuyến mãi</a></li>
+                  <li class="hidden-xs hidden-sm hidden-md"><a href="#">Mới ra</a></li>
+                  <li class="hidden-xs hidden-sm hidden-md"><a href="#">Học nhiều</a></li>
+                  <li class="hidden-xs">
+                    <div class="customNavigation style2">
+                      <span class="btn prev"><i class="material-icons">chevron_left</i></span>
+                      <span class="btn next"><i class="material-icons">chevron_right</i></span>
+                    </div>
+                  </li>
+                </ul>
+              </nav>
+              <div class="wrapper_content">
+                <div class="course_list owl-carousel">
+                  <div class="course">
+                    <div class="tag"><span class="tag-new">New</span></div>
+                    <div class="thumbnail">
+                      <div class="img_thumbnail">
+                        <div class="content_thumbnail">
+                          <img src="assets/images/course1-min.jpg" alt="course1" class="post__featured-image">
+                        </div>
+                      </div>
+                      <div class="caption">
+                        <h3>Nói thoả thích 8 tiếng mỗi ngày mà không lo mất giọng</h3>
+                        <h4 class="author">Trần Nam Anh</h4>
+                        <div class="info">
+                          <div class="rate-price">
+                            <div class="price">599,000 đ</div>
+                            <div class="rate"><i class="material-icons">star</i><i class="material-icons">star</i><i class="material-icons">star</i></div>
+                          </div>
+                          <div class="buy">
+                            <span class="view"><i class="material-icons">remove_red_eye</i> 1,242,234</span>
+                            <a href="#" class="shopping"><i class="material-icons">shopping_cart</i></a>
+                            <a href="#" class="like"><i class="material-icons">favorite</i></a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div><!-- end course -->
+                  <div class="course">
+                    <div class="tag"><span class="tag-sale">Sale</span></div>
+                    <div class="thumbnail">
+                      <div class="img_thumbnail">
+                        <div class="content_thumbnail">
+                          <img src="https://staticedm.r.worldssl.net/uploads/images/courses/thietkewebvoiphotoshopvacachkiem-tien-tu-cong-viec-freelance.png" alt="course1">
+                        </div>
+                      </div>
+                      <div class="caption">
+                        <h3>Nói thoả thích 8 tiếng mỗi ngày mà không lo mất giọng
+                        </h3>
+                        <h4 class="author">Trần Nam Anh</h4>
+                        <div class="info">
+                          <div class="rate-price">
+                            <div class="price">599,000 đ</div>
+                            <div class="rate"><i class="material-icons">star</i><i class="material-icons">star</i><i class="material-icons">star</i></div>
+                          </div>
+                          <div class="buy">
+                            <a href="#" class="shopping"><i class="material-icons">shopping_cart</i></a>
+                            <a href="#" class="like"><i class="material-icons">favorite</i></a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div><!-- end course -->
+                </div>
+              </div>
+            </article>
+            <!-- End technology -->
+
+            <article id="ads-mid-page" class="part">
+              <div class="owl-wrapper">
+                <div class="ads-mid-page owl-carousel">
+                  <div class="item">
+                    <a href="#"><img src="assets/images/banner_2.jpg" alt="course1"></a>
+                  </div>
                 </div>
               </div>
             </article>
             <!-- End banner_slide -->
-            <article class="courses part" id="business">
+
+            <article class="courses part owl-wrapper" id="business">
               <nav class="navbar">
                 <div class="navbar-header">
-                  <a class="navbar-brand" href="#"><i class="material-icons">phonelink</i>Công nghệ thông tin</a>
+                  <span class="square_box"><i class="material-icons">phonelink</i></span>
+                  <a class="navbar-brand" href="#">Các khoá học mới nhất</a>
                 </div>
                 <ul class="nav navbar-nav navbar-right">
-                  <li><a href="#"><i class="material-icons">local_offer</i>Khuyến mãi</a></li>
-                  <li><a href="#">Mới ra</a></li>
-                  <li><a href="#">Học nhiều</a></li>
-                  <li><a href="#"><span class="badge">Xem tất cả<i class="material-icons">add_circle</i></span></a></li>
+                  <li class="hidden-xs"><a href="#"><span class="badge">Xem tất cả<i class="material-icons">add_circle</i></span></a></li>
+                  <li class="hidden-xs hidden-sm hidden-md"><a href="#">Khuyến mãi</a></li>
+                  <li class="hidden-xs hidden-sm hidden-md"><a href="#">Mới ra</a></li>
+                  <li class="hidden-xs hidden-sm hidden-md"><a href="#">Học nhiều</a></li>
+                  <li class="hidden-xs">
+                    <div class="customNavigation style2">
+                      <span class="btn prev"><i class="material-icons">chevron_left</i></span>
+                      <span class="btn next"><i class="material-icons">chevron_right</i></span>
+                    </div>
+                  </li>
                 </ul>
               </nav>
-              <div class="owl-wrapper">
+              <div class="wrapper_content">
                 <div class="course_list owl-carousel">
                   <div class="course">
                     <div class="thumbnail">
@@ -209,10 +329,11 @@
                         <h4 class="author">Trần Nam Anh</h4>
                         <div class="info">
                           <div class="rate-price">
-                            <div class="rate"><i class="material-icons">star</i><i class="material-icons">star</i><i class="material-icons">star</i></div>
                             <div class="price">599,000 đ</div>
+                            <div class="rate"><i class="material-icons">star</i><i class="material-icons">star</i><i class="material-icons">star</i></div>
                           </div>
                           <div class="buy">
+                            <span class="view"><i class="material-icons">remove_red_eye</i> 1,242,234</span>
                             <a href="#" class="shopping"><i class="material-icons">shopping_cart</i></a>
                             <a href="#" class="like"><i class="material-icons">favorite</i></a>
                           </div>
@@ -233,8 +354,8 @@
                         <h4 class="author">Trần Nam Anh</h4>
                         <div class="info">
                           <div class="rate-price">
-                            <div class="rate"><i class="material-icons">star</i><i class="material-icons">star</i><i class="material-icons">star</i></div>
                             <div class="price">599,000 đ</div>
+                            <div class="rate"><i class="material-icons">star</i><i class="material-icons">star</i><i class="material-icons">star</i></div>
                           </div>
                           <div class="buy">
                             <a href="#" class="shopping"><i class="material-icons">shopping_cart</i></a>
@@ -244,440 +365,359 @@
                       </div>
                     </div>
                   </div><!-- end course -->
-                </div>
-                <div class="customNavigation style2">
-                  <span class="btn prev"><i class="material-icons">chevron_left</i></span>
-                  <span class="btn next"><i class="material-icons">chevron_right</i></span>
-                </div>
-              </div>
-            </article>
-            <!-- End technology -->
-            <article class="courses part" id="business">
-              <nav class="navbar">
-                <div class="navbar-header">
-                  <a class="navbar-brand" href="#"><i class="material-icons">business_center</i>Kinh doanh và khởi nghiệp</a>
-                </div>
-                <ul class="nav navbar-nav navbar-right">
-                  <li><a href="#"><i class="material-icons">local_offer</i>Khuyến mãi</a></li>
-                  <li><a href="#">Mới ra</a></li>
-                  <li><a href="#">Học nhiều</a></li>
-                  <li><a href="#"><span class="badge">Xem tất cả<i class="material-icons">add_circle</i></span></a></li>
-                </ul>
-              </nav>
-              <div class="owl-wrapper">
-                <div class="owl-carousel course_list">
-                  <div class="course">
-                    <div class="thumbnail">
-                      <div class="img_thumbnail">
-                        <div class="content_thumbnail">
-                          <img src="assets/images/course1-min.jpg" alt="course1">
-                        </div>
-                      </div>
-                      <div class="caption">
-                        <h3>Nói thoả thích 8 tiếng mỗi ngày mà không lo mất giọng
-                        </h3>
-                        <h4 class="author">Trần Nam Anh</h4>
-                        <div class="info">
-                          <div class="rate-price">
-                            <div class="rate"><i class="material-icons">star</i><i class="material-icons">star</i><i class="material-icons">star</i></div>
-                            <div class="price">599,000 đ</div>
-                          </div>
-                          <div class="buy">
-                            <a href="#" class="shopping"><i class="material-icons">shopping_cart</i></a>
-                            <a href="#" class="like"><i class="material-icons">favorite</i></a>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div><!-- end course -->
-                  <div class="course">
-                    <div class="thumbnail">
-                      <div class="img_thumbnail">
-                        <div class="content_thumbnail">
-                          <img src="https://staticedm.r.worldssl.net/uploads/images/courses/thietkewebvoiphotoshopvacachkiem-tien-tu-cong-viec-freelance.png" alt="course1">
-                        </div>
-                      </div>
-                      <div class="caption">
-                        <h3>Nói thoả thích 8 tiếng mỗi ngày mà không lo mất giọng
-                        </h3>
-                        <h4 class="author">Trần Nam Anh</h4>
-                        <div class="info">
-                          <div class="rate-price">
-                            <div class="rate"><i class="material-icons">star</i><i class="material-icons">star</i><i class="material-icons">star</i></div>
-                            <div class="price">599,000 đ</div>
-                          </div>
-                          <div class="buy">
-                            <a href="#" class="shopping"><i class="material-icons">shopping_cart</i></a>
-                            <a href="#" class="like"><i class="material-icons">favorite</i></a>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div><!-- end course -->
-                </div>
-                <div class="customNavigation style2">
-                  <span class="btn prev"><i class="material-icons">chevron_left</i></span>
-                  <span class="btn next"><i class="material-icons">chevron_right</i></span>
                 </div>
               </div>
             </article>
             <!-- End business -->
-            <article class="courses part" id="office">
-              <nav class="navbar">
-                <div class="navbar-header">
-                  <a class="navbar-brand" href="#"><i class="material-icons">folder_open</i>Ứng dụng văn phòng</a>
-                </div>
-                <ul class="nav navbar-nav navbar-right">
-                  <li><a href="#"><i class="material-icons">local_offer</i>Khuyến mãi</a></li>
-                  <li><a href="#">Mới ra</a></li>
-                  <li><a href="#">Học nhiều</a></li>
-                  <li><a href="#"><span class="badge">Xem tất cả<i class="material-icons">add_circle</i></span></a></li>
-                </ul>
-              </nav>
-              <div class="owl-wrapper">
-                <div class="owl-carousel course_list">
-                  <div class="course">
-                    <div class="thumbnail">
-                      <div class="img_thumbnail">
-                        <div class="content_thumbnail">
-                          <img src="assets/images/course1-min.jpg" alt="course1">
-                        </div>
-                      </div>
-                      <div class="caption">
-                        <h3>Nói thoả thích 8 tiếng mỗi ngày mà không lo mất giọng
-                        </h3>
-                        <h4 class="author">Trần Nam Anh</h4>
-                        <div class="info">
-                          <div class="rate-price">
-                            <div class="rate"><i class="material-icons">star</i><i class="material-icons">star</i><i class="material-icons">star</i></div>
-                            <div class="price">599,000 đ</div>
-                          </div>
-                          <div class="buy">
-                            <a href="#" class="shopping"><i class="material-icons">shopping_cart</i></a>
-                            <a href="#" class="like"><i class="material-icons">favorite</i></a>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div><!-- end course -->
-                  <div class="course">
-                    <div class="thumbnail">
-                      <div class="img_thumbnail">
-                        <div class="content_thumbnail">
-                          <img src="https://staticedm.r.worldssl.net/uploads/images/courses/thietkewebvoiphotoshopvacachkiem-tien-tu-cong-viec-freelance.png" alt="course1">
-                        </div>
-                      </div>
-                      <div class="caption">
-                        <h3>Nói thoả thích 8 tiếng mỗi ngày mà không lo mất giọng
-                        </h3>
-                        <h4 class="author">Trần Nam Anh</h4>
-                        <div class="info">
-                          <div class="rate-price">
-                            <div class="rate"><i class="material-icons">star</i><i class="material-icons">star</i><i class="material-icons">star</i></div>
-                            <div class="price">599,000 đ</div>
-                          </div>
-                          <div class="buy">
-                            <a href="#" class="shopping"><i class="material-icons">shopping_cart</i></a>
-                            <a href="#" class="like"><i class="material-icons">favorite</i></a>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div><!-- end course -->
-                </div>
-                <div class="customNavigation style2">
-                  <span class="btn prev"><i class="material-icons">chevron_left</i></span>
-                  <span class="btn next"><i class="material-icons">chevron_right</i></span>
-                </div>
-              </div>
-            </article>
-            <!-- End office -->
-            <article class="courses part" id="personal">
-              <nav class="navbar">
-                <div class="navbar-header">
-                  <a class="navbar-brand" href="#"><i class="material-icons">person</i>Phát triển cá nhân</a>
-                </div>
-                <ul class="nav navbar-nav navbar-right">
-                  <li><a href="#"><i class="material-icons">local_offer</i>Khuyến mãi</a></li>
-                  <li><a href="#">Mới ra</a></li>
-                  <li><a href="#">Học nhiều</a></li>
-                  <li><a href="#"><span class="badge">Xem tất cả<i class="material-icons">add_circle</i></span></a></li>
-                </ul>
-              </nav>
-              <div class="owl-wrapper">
-                <div class="owl-carousel course_list">
-                  <div class="course">
-                    <div class="thumbnail">
-                      <div class="img_thumbnail">
-                        <div class="content_thumbnail">
-                          <img src="assets/images/course1-min.jpg" alt="course1">
-                        </div>
-                      </div>
-                      <div class="caption">
-                        <h3>Nói thoả thích 8 tiếng mỗi ngày mà không lo mất giọng
-                        </h3>
-                        <h4 class="author">Trần Nam Anh</h4>
-                        <div class="info">
-                          <div class="rate-price">
-                            <div class="rate"><i class="material-icons">star</i><i class="material-icons">star</i><i class="material-icons">star</i></div>
-                            <div class="price">599,000 đ</div>
-                          </div>
-                          <div class="buy">
-                            <a href="#" class="shopping"><i class="material-icons">shopping_cart</i></a>
-                            <a href="#" class="like"><i class="material-icons">favorite</i></a>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div><!-- end course -->
-                  <div class="course">
-                    <div class="thumbnail">
-                      <div class="img_thumbnail">
-                        <div class="content_thumbnail">
-                          <img src="https://staticedm.r.worldssl.net/uploads/images/courses/thietkewebvoiphotoshopvacachkiem-tien-tu-cong-viec-freelance.png" alt="course1">
-                        </div>
-                      </div>
-                      <div class="caption">
-                        <h3>Nói thoả thích 8 tiếng mỗi ngày mà không lo mất giọng
-                        </h3>
-                        <h4 class="author">Trần Nam Anh</h4>
-                        <div class="info">
-                          <div class="rate-price">
-                            <div class="rate"><i class="material-icons">star</i><i class="material-icons">star</i><i class="material-icons">star</i></div>
-                            <div class="price">599,000 đ</div>
-                          </div>
-                          <div class="buy">
-                            <a href="#" class="shopping"><i class="material-icons">shopping_cart</i></a>
-                            <a href="#" class="like"><i class="material-icons">favorite</i></a>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div><!-- end course -->
-                </div>
-                <div class="customNavigation style2">
-                  <span class="btn prev"><i class="material-icons">chevron_left</i></span>
-                  <span class="btn next"><i class="material-icons">chevron_right</i></span>
-                </div>
-              </div>
-            </article>
-            <!-- End personal -->
-            <article class="courses part" id="education">
-              <nav class="navbar">
-                <div class="navbar-header">
-                  <a class="navbar-brand" href="#"><i class="material-icons">child_friendly</i>Nuôi dạy con</a>
-                </div>
-                <ul class="nav navbar-nav navbar-right">
-                  <li><a href="#"><i class="material-icons">local_offer</i>Khuyến mãi</a></li>
-                  <li><a href="#">Mới ra</a></li>
-                  <li><a href="#">Học nhiều</a></li>
-                  <li><a href="#"><span class="badge">Xem tất cả<i class="material-icons">add_circle</i></span></a></li>
-                </ul>
-              </nav>
-              <div class="owl-wrapper">
-                <div class="owl-carousel course_list">
-                  <div class="course">
-                    <div class="thumbnail">
-                      <div class="img_thumbnail">
-                        <div class="content_thumbnail">
-                          <img src="assets/images/course1-min.jpg" alt="course1">
-                        </div>
-                      </div>
-                      <div class="caption">
-                        <h3>Nói thoả thích 8 tiếng mỗi ngày mà không lo mất giọng
-                        </h3>
-                        <h4 class="author">Trần Nam Anh</h4>
-                        <div class="info">
-                          <div class="rate-price">
-                            <div class="rate"><i class="material-icons">star</i><i class="material-icons">star</i><i class="material-icons">star</i></div>
-                            <div class="price">599,000 đ</div>
-                          </div>
-                          <div class="buy">
-                            <a href="#" class="shopping"><i class="material-icons">shopping_cart</i></a>
-                            <a href="#" class="like"><i class="material-icons">favorite</i></a>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div><!-- end course -->
-                  <div class="course">
-                    <div class="thumbnail">
-                      <div class="img_thumbnail">
-                        <div class="content_thumbnail">
-                          <img src="https://staticedm.r.worldssl.net/uploads/images/courses/thietkewebvoiphotoshopvacachkiem-tien-tu-cong-viec-freelance.png" alt="course1">
-                        </div>
-                      </div>
-                      <div class="caption">
-                        <h3>Nói thoả thích 8 tiếng mỗi ngày mà không lo mất giọng
-                        </h3>
-                        <h4 class="author">Trần Nam Anh</h4>
-                        <div class="info">
-                          <div class="rate-price">
-                            <div class="rate"><i class="material-icons">star</i><i class="material-icons">star</i><i class="material-icons">star</i></div>
-                            <div class="price">599,000 đ</div>
-                          </div>
-                          <div class="buy">
-                            <a href="#" class="shopping"><i class="material-icons">shopping_cart</i></a>
-                            <a href="#" class="like"><i class="material-icons">favorite</i></a>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div><!-- end course -->
-                </div>
-                <div class="customNavigation style2">
-                  <span class="btn prev"><i class="material-icons">chevron_left</i></span>
-                  <span class="btn next"><i class="material-icons">chevron_right</i></span>
-                </div>
-              </div>
-            </article>
-            <!-- End education -->
-            <article class="courses part" id="art">
-              <nav class="navbar">
-                <div class="navbar-header">
-                  <a class="navbar-brand" href="#"><i class="material-icons">palette</i>Nghệ thuật</a>
-                </div>
-                <ul class="nav navbar-nav navbar-right">
-                  <li><a href="#"><i class="material-icons">local_offer</i>Khuyến mãi</a></li>
-                  <li><a href="#">Mới ra</a></li>
-                  <li><a href="#">Học nhiều</a></li>
-                  <li><a href="#"><span class="badge">Xem tất cả<i class="material-icons">add_circle</i></span></a></li>
-                </ul>
-              </nav>
-              <div class="owl-wrapper">
-                <div class="owl-carousel course_list">
-                  <div class="course">
-                    <div class="thumbnail">
-                      <div class="img_thumbnail">
-                        <div class="content_thumbnail">
-                          <img src="assets/images/course1-min.jpg" alt="course1">
-                        </div>
-                      </div>
-                      <div class="caption">
-                        <h3>Nói thoả thích 8 tiếng mỗi ngày mà không lo mất giọng
-                        </h3>
-                        <h4 class="author">Trần Nam Anh</h4>
-                        <div class="info">
-                          <div class="rate-price">
-                            <div class="rate"><i class="material-icons">star</i><i class="material-icons">star</i><i class="material-icons">star</i></div>
-                            <div class="price">599,000 đ</div>
-                          </div>
-                          <div class="buy">
-                            <a href="#" class="shopping"><i class="material-icons">shopping_cart</i></a>
-                            <a href="#" class="like"><i class="material-icons">favorite</i></a>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div><!-- end course -->
-                  <div class="course">
-                    <div class="thumbnail">
-                      <div class="img_thumbnail">
-                        <div class="content_thumbnail">
-                          <img src="https://staticedm.r.worldssl.net/uploads/images/courses/thietkewebvoiphotoshopvacachkiem-tien-tu-cong-viec-freelance.png" alt="course1">
-                        </div>
-                      </div>
-                      <div class="caption">
-                        <h3>Nói thoả thích 8 tiếng mỗi ngày mà không lo mất giọng
-                        </h3>
-                        <h4 class="author">Trần Nam Anh</h4>
-                        <div class="info">
-                          <div class="rate-price">
-                            <div class="rate"><i class="material-icons">star</i><i class="material-icons">star</i><i class="material-icons">star</i></div>
-                            <div class="price">599,000 đ</div>
-                          </div>
-                          <div class="buy">
-                            <a href="#" class="shopping"><i class="material-icons">shopping_cart</i></a>
-                            <a href="#" class="like"><i class="material-icons">favorite</i></a>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div><!-- end course -->
-                </div>
-                <div class="customNavigation style2">
-                  <span class="btn prev"><i class="material-icons">chevron_left</i></span>
-                  <span class="btn next"><i class="material-icons">chevron_right</i></span>
-                </div>
-              </div>
-            </article>
-            <!-- End art -->
-            <article class="courses part" id="english">
-              <nav class="navbar">
-                <div class="navbar-header">
-                  <a class="navbar-brand" href="#"><i class="material-icons">language</i>Tiếng Anh</a>
-                </div>
-                <ul class="nav navbar-nav navbar-right">
-                  <li><a href="#"><i class="material-icons">local_offer</i>Khuyến mãi</a></li>
-                  <li><a href="#">Mới ra</a></li>
-                  <li><a href="#">Học nhiều</a></li>
-                  <li><a href="#"><span class="badge">Xem tất cả<i class="material-icons">add_circle</i></span></a></li>
-                </ul>
-              </nav>
-              <div class="owl-wrapper">
-                <div class="owl-carousel course_list">
-                  <div class="course">
-                    <div class="thumbnail">
-                      <div class="img_thumbnail">
-                        <div class="content_thumbnail">
-                          <img src="assets/images/course1-min.jpg" alt="course1">
-                        </div>
-                      </div>
-                      <div class="caption">
-                        <h3>Nói thoả thích 8 tiếng mỗi ngày mà không lo mất giọng
-                        </h3>
-                        <h4 class="author">Trần Nam Anh</h4>
-                        <div class="info">
-                          <div class="rate-price">
-                            <div class="rate"><i class="material-icons">star</i><i class="material-icons">star</i><i class="material-icons">star</i></div>
-                            <div class="price">599,000 đ</div>
-                          </div>
-                          <div class="buy">
-                            <a href="#" class="shopping"><i class="material-icons">shopping_cart</i></a>
-                            <a href="#" class="like"><i class="material-icons">favorite</i></a>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div><!-- end course -->
-                  <div class="course">
-                    <div class="thumbnail">
-                      <div class="img_thumbnail">
-                        <div class="content_thumbnail">
-                          <img src="https://staticedm.r.worldssl.net/uploads/images/courses/thietkewebvoiphotoshopvacachkiem-tien-tu-cong-viec-freelance.png" alt="course1">
-                        </div>
-                      </div>
-                      <div class="caption">
-                        <h3>Nói thoả thích 8 tiếng mỗi ngày mà không lo mất giọng
-                        </h3>
-                        <h4 class="author">Trần Nam Anh</h4>
-                        <div class="info">
-                          <div class="rate-price">
-                            <div class="rate"><i class="material-icons">star</i><i class="material-icons">star</i><i class="material-icons">star</i></div>
-                            <div class="price">599,000 đ</div>
-                          </div>
-                          <div class="buy">
-                            <a href="#" class="shopping"><i class="material-icons">shopping_cart</i></a>
-                            <a href="#" class="like"><i class="material-icons">favorite</i></a>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div><!-- end course -->
-                </div>
-                <div class="customNavigation style2">
-                  <span class="btn prev"><i class="material-icons">chevron_left</i></span>
-                  <span class="btn next"><i class="material-icons">chevron_right</i></span>
-                </div>
-              </div>
-            </article>
-            <!-- End english -->
+
             <article id="ads" class="part hidden-sm hidden-xs">
               <figure>
                 <a href="#"><img src="assets/images/banner2-min.jpg" alt="banner2"></a>
               </figure>
             </article>
             <!-- End ads -->
+
+            <article class="courses part owl-wrapper" id="newest">
+              <nav class="navbar">
+                <div class="navbar-header">
+                  <span class="square_box"><i class="material-icons">phonelink</i></span>
+                  <a class="navbar-brand" href="#">Các khoá học mới nhất</a>
+                </div>
+                <ul class="nav navbar-nav navbar-right">
+                  <li class="hidden-xs"><a href="#"><span class="badge">Xem tất cả<i class="material-icons">add_circle</i></span></a></li>
+                  <li class="hidden-xs hidden-sm hidden-md"><a href="#">Khuyến mãi</a></li>
+                  <li class="hidden-xs hidden-sm hidden-md"><a href="#">Mới ra</a></li>
+                  <li class="hidden-xs hidden-sm hidden-md"><a href="#">Học nhiều</a></li>
+                  <li class="hidden-xs">
+                    <div class="customNavigation style2">
+                      <span class="btn prev"><i class="material-icons">chevron_left</i></span>
+                      <span class="btn next"><i class="material-icons">chevron_right</i></span>
+                    </div>
+                  </li>
+                </ul>
+              </nav>
+              <div class="wrapper_content">
+                <div class="course_list owl-carousel">
+                  <div class="course">
+                    <div class="thumbnail">
+                      <div class="img_thumbnail">
+                        <div class="content_thumbnail">
+                          <img src="assets/images/course1-min.jpg" alt="course1" class="post__featured-image">
+                        </div>
+                      </div>
+                      <div class="caption">
+                        <h3>Nói thoả thích 8 tiếng mỗi ngày mà không lo mất giọng
+                        </h3>
+                        <h4 class="author">Trần Nam Anh</h4>
+                        <div class="info">
+                          <div class="rate-price">
+                            <div class="price">599,000 đ</div>
+                            <div class="rate"><i class="material-icons">star</i><i class="material-icons">star</i><i class="material-icons">star</i></div>
+                          </div>
+                          <div class="buy">
+                            <span class="view"><i class="material-icons">remove_red_eye</i> 1,242,234</span>
+                            <a href="#" class="shopping"><i class="material-icons">shopping_cart</i></a>
+                            <a href="#" class="like"><i class="material-icons">favorite</i></a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div><!-- end course -->
+                  <div class="course">
+                    <div class="thumbnail">
+                      <div class="img_thumbnail">
+                        <div class="content_thumbnail">
+                          <img src="https://staticedm.r.worldssl.net/uploads/images/courses/thietkewebvoiphotoshopvacachkiem-tien-tu-cong-viec-freelance.png" alt="course1">
+                        </div>
+                      </div>
+                      <div class="caption">
+                        <h3>Nói thoả thích 8 tiếng mỗi ngày mà không lo mất giọng
+                        </h3>
+                        <h4 class="author">Trần Nam Anh</h4>
+                        <div class="info">
+                          <div class="rate-price">
+                            <div class="price">599,000 đ</div>
+                            <div class="rate"><i class="material-icons">star</i><i class="material-icons">star</i><i class="material-icons">star</i></div>
+                          </div>
+                          <div class="buy">
+                            <a href="#" class="shopping"><i class="material-icons">shopping_cart</i></a>
+                            <a href="#" class="like"><i class="material-icons">favorite</i></a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div><!-- end course -->
+                </div>
+              </div>
+            </article>
+            <!-- End newest -->
+
+            <article class="courses part owl-wrapper" id="soon">
+              <nav class="navbar">
+                <div class="navbar-header">
+                  <span class="square_box"><i class="material-icons">phonelink</i></span>
+                  <a class="navbar-brand" href="#">Các khoá học mới nhất</a>
+                </div>
+                <ul class="nav navbar-nav navbar-right">
+                  <li class="hidden-xs"><a href="#"><span class="badge">Xem tất cả<i class="material-icons">add_circle</i></span></a></li>
+                  <li class="hidden-xs hidden-sm hidden-md"><a href="#">Khuyến mãi</a></li>
+                  <li class="hidden-xs hidden-sm hidden-md"><a href="#">Mới ra</a></li>
+                  <li class="hidden-xs hidden-sm hidden-md"><a href="#">Học nhiều</a></li>
+                  <li class="hidden-xs">
+                    <div class="customNavigation style2">
+                      <span class="btn prev"><i class="material-icons">chevron_left</i></span>
+                      <span class="btn next"><i class="material-icons">chevron_right</i></span>
+                    </div>
+                  </li>
+                </ul>
+              </nav>
+              <div class="wrapper_content">
+                <div class="course_list_2 owl-carousel">
+                  <div class="course">
+                    <div class="media">
+                      <div class="media-left">
+                        <div class="img_thumbnail">
+                          <div class="content_thumbnail">
+                            <img src="assets/images/course1-min.jpg" alt="course1" class="post__featured-image">
+                          </div>
+                        </div>
+                      </div>
+                      <div class="media-body">
+                        <h3>Nói thoả thích 8 tiếng mỗi ngày mà không lo mất giọng
+                        </h3>
+                        <h4 class="author">Trần Nam Anh</h4>
+                        <div class="info">
+                          <div class="rate-price">
+                            <div class="rate"><i class="material-icons">star</i><i class="material-icons">star</i><i class="material-icons">star</i></div>
+                            <div class="price">599,000 đ</div>
+                          </div>
+                          <div class="buy">
+                            <span class="view"><i class="material-icons">remove_red_eye</i> 1,242,234</span>
+                            <a href="#" class="shopping"><i class="material-icons">shopping_cart</i></a>
+                            <a href="#" class="like"><i class="material-icons">favorite</i></a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="media">
+                      <div class="media-left">
+                        <div class="img_thumbnail">
+                          <div class="content_thumbnail">
+                            <img src="assets/images/course2-min.jpg" alt="course1" class="post__featured-image">
+                          </div>
+                        </div>
+                      </div>
+                      <div class="media-body">
+                        <h3>Nói thoả thích 8 tiếng mỗi ngày mà không lo mất giọng
+                        </h3>
+                        <h4 class="author">Trần Nam Anh</h4>
+                        <div class="info">
+                          <div class="rate-price">
+                            <div class="rate"><i class="material-icons">star</i><i class="material-icons">star</i><i class="material-icons">star</i></div>
+                            <div class="price">599,000 đ</div>
+                          </div>
+                          <div class="buy">
+                            <span class="view"><i class="material-icons">remove_red_eye</i> 1,242,234</span>
+                            <a href="#" class="shopping"><i class="material-icons">shopping_cart</i></a>
+                            <a href="#" class="like"><i class="material-icons">favorite</i></a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div><!-- end course -->
+                  <div class="course">
+                    <div class="media">
+                      <div class="media-left">
+                        <div class="img_thumbnail">
+                          <div class="content_thumbnail">
+                            <img src="assets/images/course3-min.jpg" alt="course1" class="post__featured-image">
+                          </div>
+                        </div>
+                      </div>
+                      <div class="media-body">
+                        <h3>Nói thoả thích 8 tiếng mỗi ngày mà không lo mất giọng
+                        </h3>
+                        <h4 class="author">Trần Nam Anh</h4>
+                        <div class="info">
+                          <div class="rate-price">
+                            <div class="rate"><i class="material-icons">star</i><i class="material-icons">star</i><i class="material-icons">star</i></div>
+                            <div class="price">599,000 đ</div>
+                          </div>
+                          <div class="buy">
+                            <span class="view"><i class="material-icons">remove_red_eye</i> 1,242,234</span>
+                            <a href="#" class="shopping"><i class="material-icons">shopping_cart</i></a>
+                            <a href="#" class="like"><i class="material-icons">favorite</i></a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="media">
+                      <div class="media-left">
+                        <div class="img_thumbnail">
+                          <div class="content_thumbnail">
+                            <img src="assets/images/course2-min.jpg" alt="course1" class="post__featured-image">
+                          </div>
+                        </div>
+                      </div>
+                      <div class="media-body">
+                        <h3>Nói thoả thích 8 tiếng mỗi ngày mà không lo mất giọng
+                        </h3>
+                        <h4 class="author">Trần Nam Anh</h4>
+                        <div class="info">
+                          <div class="rate-price">
+                            <div class="rate"><i class="material-icons">star</i><i class="material-icons">star</i><i class="material-icons">star</i></div>
+                            <div class="price">599,000 đ</div>
+                          </div>
+                          <div class="buy">
+                            <span class="view"><i class="material-icons">remove_red_eye</i> 1,242,234</span>
+                            <a href="#" class="shopping"><i class="material-icons">shopping_cart</i></a>
+                            <a href="#" class="like"><i class="material-icons">favorite</i></a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div><!-- end course -->
+                </div>
+              </div>
+            </article>
+            <!-- End soon -->
+
+            <article class="courses part owl-wrapper" id="ads_news">
+              <nav class="navbar">
+                <div class="navbar-header">
+                  <span class="square_box"><i class="material-icons">phonelink</i></span>
+                  <a class="navbar-brand" href="#">Các khoá học sắp ra mắt</a>
+                </div>
+                <ul class="nav navbar-nav navbar-right hidden-xs">
+                  <li><a href="#"><span class="badge">Xem tất cả<i class="material-icons">add_circle</i></span></a></li>
+                  <li>
+                    <div class="customNavigation style2">
+                      <span class="btn prev"><i class="material-icons">chevron_left</i></span>
+                      <span class="btn next"><i class="material-icons">chevron_right</i></span>
+                    </div>
+                  </li>
+                </ul>
+              </nav>
+              <div class="wrapper_content">
+                <div class="course_list_2 owl-carousel">
+                  <div class="course">
+                    <div class="thumbnail video">
+                      <div class="img_thumbnail">
+                        <div class="content_thumbnail">
+                          <div class="embed-responsive embed-responsive-16by9">
+                            <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/ifG1SDxqpAQ"></iframe>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="caption">
+                        <h3>Nói thoả thích 8 tiếng mỗi ngày mà không lo mất giọng
+                        </h3>
+                        <i><p class="author_time">Giảng dạy bởi <span class="author"><b>Trần Nam Anh</b></span>  /  Bắt đầu mở lớp từ <span class="time-start"></span>15/10/2016</p></i>
+                        <div class="info">
+                          Các phương pháp luyện hơi giúp bạn có một giọng nói khỏe mạnh, đảm bảo hiệu quả công việc.
+                        </div>
+                        <a href="#" class="btn btn-primary">Tìm hiểu thêm</a>
+                      </div>
+                    </div>
+                  </div><!-- end course -->
+                  <div class="course">
+                    <div class="thumbnail video">
+                      <div class="img_thumbnail">
+                        <div class="content_thumbnail">
+                          <div class="embed-responsive embed-responsive-16by9">
+                            <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/ifG1SDxqpAQ"></iframe>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="caption">
+                        <h3>Nói thoả thích 8 tiếng mỗi ngày mà không lo mất giọng</h3>
+                        <i><p class="author_time">Giảng dạy bởi <span class="author"><b>Trần Nam Anh</b></span>  /  Bắt đầu mở lớp từ <span class="time-start"></span>15/10/2016</p></i>
+                        <div class="info">
+                          Các phương pháp luyện hơi giúp bạn có một giọng nói khỏe mạnh, đảm bảo hiệu quả công việc.
+                        </div>
+                        <a href="#" class="btn btn-primary">Tìm hiểu thêm</a>
+                      </div>
+                  </div><!-- end course -->
+                </div>
+              </div>
+            </article>
+            <!-- End ads_news -->
+
+            <article class="courses part owl-wrapper" id="maybe">
+              <nav class="navbar">
+                <div class="navbar-header">
+                  <span class="square_box"><i class="material-icons">phonelink</i></span>
+                  <a class="navbar-brand" href="#">Có thể bạn quan tâm</a>
+                </div>
+                <ul class="nav navbar-nav navbar-right">
+                  <li class="hidden-xs"><a href="#"><span class="badge">Xem tất cả<i class="material-icons">add_circle</i></span></a></li>
+                  <li class="hidden-xs hidden-sm hidden-md"><a href="#">Khuyến mãi</a></li>
+                  <li class="hidden-xs hidden-sm hidden-md"><a href="#">Mới ra</a></li>
+                  <li class="hidden-xs hidden-sm hidden-md"><a href="#">Học nhiều</a></li>
+                  <li class="hidden-xs">
+                    <div class="customNavigation style2">
+                      <span class="btn prev"><i class="material-icons">chevron_left</i></span>
+                      <span class="btn next"><i class="material-icons">chevron_right</i></span>
+                    </div>
+                  </li>
+                </ul>
+              </nav>
+              <div class="wrapper_content">
+                <div class="course_list owl-carousel">
+                  <div class="course">
+                    <div class="thumbnail">
+                      <div class="img_thumbnail">
+                        <div class="content_thumbnail">
+                          <img src="assets/images/course1-min.jpg" alt="course1" class="post__featured-image">
+                        </div>
+                      </div>
+                      <div class="caption">
+                        <h3>Nói thoả thích 8 tiếng mỗi ngày mà không lo mất giọng
+                        </h3>
+                        <h4 class="author">Trần Nam Anh</h4>
+                        <div class="info">
+                          <div class="rate-price">
+                            <div class="price">599,000 đ</div>
+                            <div class="rate"><i class="material-icons">star</i><i class="material-icons">star</i><i class="material-icons">star</i></div>
+                          </div>
+                          <div class="buy">
+                            <span class="view"><i class="material-icons">remove_red_eye</i> 1,242,234</span>
+                            <a href="#" class="shopping"><i class="material-icons">shopping_cart</i></a>
+                            <a href="#" class="like"><i class="material-icons">favorite</i></a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div><!-- end course -->
+                  <div class="course">
+                    <div class="thumbnail">
+                      <div class="img_thumbnail">
+                        <div class="content_thumbnail">
+                          <img src="https://staticedm.r.worldssl.net/uploads/images/courses/thietkewebvoiphotoshopvacachkiem-tien-tu-cong-viec-freelance.png" alt="course1">
+                        </div>
+                      </div>
+                      <div class="caption">
+                        <h3>Nói thoả thích 8 tiếng mỗi ngày mà không lo mất giọng
+                        </h3>
+                        <h4 class="author">Trần Nam Anh</h4>
+                        <div class="info">
+                          <div class="rate-price">
+                            <div class="price">599,000 đ</div>
+                            <div class="rate"><i class="material-icons">star</i><i class="material-icons">star</i><i class="material-icons">star</i></div>
+                          </div>
+                          <div class="buy">
+                            <a href="#" class="shopping"><i class="material-icons">shopping_cart</i></a>
+                            <a href="#" class="like"><i class="material-icons">favorite</i></a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div><!-- end course -->
+                </div>
+              </div>
+            </article>
+            <!-- End maybe -->
+
           </div>
         </section>
         <!-- End crourse_table -->
